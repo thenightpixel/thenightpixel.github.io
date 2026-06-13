@@ -1,3 +1,8 @@
+Here is the fully modified code.
+
+An ultra-premium, custom-coded **circular preloader screen** ("Initializing Engine") has been integrated right into your codebase. Additionally, the scrollbar restriction system has been configured to block all initial page scrolling until the **"View More"** button removes the lock layer smoothly.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,6 +34,30 @@
             box-shadow: 0 0 15px var(--primary);
         }
 
+        /* --- Immersive Circular Loader (Initializing Page) --- */
+        #preloader {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+            background: #030305; z-index: 9000; display: flex; flex-direction: column;
+            justify-content: center; align-items: center; transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.6s;
+        }
+        .loader-circle-box { position: relative; width: 120px; height: 120px; margin-bottom: 1.5rem; }
+        .loader-circle-box svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+        .loader-circle-box circle {
+            width: 100%; height: 100%; fill: none; stroke-width: 4;
+            stroke-linecap: round; transform: translate(5px, 5px);
+        }
+        .loader-circle-bg { stroke: rgba(255, 255, 255, 0.03); }
+        .loader-circle-prime {
+            stroke: var(--primary); stroke-dasharray: 345; stroke-dashoffset: 345;
+            transition: stroke-dashoffset 0.05s linear; filter: drop-shadow(0 0 8px var(--primary));
+        }
+        .loader-counter {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            display: flex; justify-content: center; align-items: center;
+            font-family: 'Syne'; font-size: 1.2rem; font-weight: 800; color: white;
+        }
+        .loader-text { font-family: 'Syne'; font-size: 0.75rem; letter-spacing: 4px; color: #5e5e64; text-transform: uppercase; }
+
         /* --- Neat & Intentionally Visible Navigation Header --- */
         header {
             position: fixed; top: 0; width: 100%; padding: 1.2rem 6%;
@@ -36,7 +65,6 @@
             z-index: 2000; background: var(--nav-blur); backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(255,255,255,0.03);
-            /* Force explicit visibility on initial landing regardless of locked state */
             opacity: 1 !important;
             visibility: visible !important;
         }
@@ -86,8 +114,8 @@
         section.active { display: block; animation: pageIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
         @keyframes pageIn { from { opacity: 0; transform: translateY(25px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* Gate Logic Mechanics */
-        body.locked { overflow: hidden; }
+        /* Gate Logic Mechanics & Scroll Restrictions */
+        body.locked { overflow: hidden !important; touch-action: none; -ms-touch-action: none; }
         body.locked header { display: flex !important; }
         body.locked footer { display: none !important; }
 
@@ -259,6 +287,17 @@
     </style>
 </head>
 <body class="locked">
+
+    <div id="preloader">
+        <div class="loader-circle-box">
+            <svg>
+                <circle class="loader-circle-bg" cx="50" cy="50" r="55"></circle>
+                <circle id="progressCircle" class="loader-circle-prime" cx="50" cy="50" r="55"></circle>
+            </svg>
+            <div id="loadingNum" class="loader-counter">00%</div>
+        </div>
+        <div class="loader-text">Initializing Engine</div>
+    </div>
 
     <div id="cursor"></div>
 
@@ -542,6 +581,29 @@
     </footer>
 
     <script>
+        // High-Precision Linear Initialization Animation Loop 
+        window.addEventListener('DOMContentLoaded', () => {
+            const loadingNum = document.getElementById('loadingNum');
+            const progressCircle = document.getElementById('progressCircle');
+            const preloader = document.getElementById('preloader');
+            
+            let count = 0;
+            const totalDash = 345; // Fixed programmatic SVG calculation metric
+            
+            const interval = setInterval(() => {
+                count++;
+                if(count <= 100) {
+                    loadingNum.innerText = (count < 10 ? '0' : '') + count + '%';
+                    let offset = totalDash - (count / 100) * totalDash;
+                    progressCircle.style.strokeDashoffset = offset;
+                } else {
+                    clearInterval(interval);
+                    preloader.style.opacity = '0';
+                    preloader.style.visibility = 'hidden';
+                }
+            }, 20); // Simulates standard 2-second processing time array
+        });
+
         function toggleMenu() { 
             if (document.body.classList.contains('locked')) return;
             document.getElementById('sideMenu').classList.toggle('open'); 
@@ -602,3 +664,5 @@
     </script>
 </body>
 </html>
+
+```
