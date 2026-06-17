@@ -3,27 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NIGHT PIXEL | Motion Editorial House</title>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    
+    <title>NIGHT PIXEL | Hire Professional Video Editing Services & Elite AMV Editors</title>
+    <meta name="description" content="Looking to hire a professional YouTube video editor, cinematic motion graphics designer, or elite AMV creator? Night Pixel Studios is a premier global video editorial house engineering raw digital footage into viral high-retention assets. We specialize in premium high-retention video editing services, custom brand motion design, YouTube channel optimization, and specialized DaVinci Resolve velocity timelines. Access our official channel blueprint library at youtube.com/@thenightpixel and get a premium edit today.">
+    <meta name="keywords" content="video editor, anime editor, AMV editor, YouTube editor, motion graphics, professional video editing, video editing services, hire video editor, viral high-retention video production, cinematic velocity edits, DaVinci Resolve video studio, hire a professional YouTube video editor, anime music video compilation production, high-fidelity velocity transition pacing">
+    <meta name="author" content="Night Pixel Studios">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    
+    <link rel="canonical" href="https://nightpixelstudios.com">
+    <link rel="icon" href="favicon.png" type="image/png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="NIGHT PIXEL | Hire Professional Video Editors & Custom Motion Design Studio">
+    <meta property="og:description" content="Surgical frame-accurate video editing engineered to drive explosive viewer retention. Secure industry-leading metrics and premium motion graphics for your channel or brand today. Visit our studio hub: youtube.com/@thenightpixel">
+    <meta property="og:url" content="https://nightpixelstudios.com">
+    <meta property="og:site_name" content="Night Pixel Studios">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://nightpixelstudios.com/og-banner.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Night Pixel Studios Elite Professional Video Editing and Motion Design Workspace UI Banner">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NIGHT PIXEL | Global Video Editorial House & Motion Graphics Experts">
+    <meta name="twitter:description" content="Hire professional video editors specializing in custom motion graphics, high-impact velocity transitions, and viral viewer retention strategy models.">
+    <meta name="twitter:image" content="https://nightpixelstudios.com/og-banner.jpg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://nightpixelstudios.com/#organization",
+          "name": "Night Pixel Studios",
+          "url": "https://nightpixelstudios.com",
+          "logo": "https://nightpixelstudios.com/logo.png",
+          "image": "https://nightpixelstudios.com/og-banner.jpg",
+          "description": "Premium professional video editing services and motion editorial house specializing in advanced AMV creation, corporate video branding, high-retention digital content blueprints, and high-fidelity motion graphics production setups. Channel asset home: https://www.youtube.com/@thenightpixel",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Dehradun",
+            "addressRegion": "Uttarakhand",
+            "addressCountry": "IN"
+          },
+          "priceRange": "₹299-₹499",
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+            ],
+            "opens": "00:00",
+            "closes": "23:59"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://nightpixelstudios.com/#website",
+          "url": "https://nightpixelstudios.com",
+          "name": "Night Pixel Studios",
+          "description": "Hire Professional Video Editors & Elite Motion Editorial House",
+          "publisher": {
+            "@id": "https://nightpixelstudios.com/#organization"
+          }
+        }
+      ]
+    }
+    </script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;500;700&family=Syne:wght=700;800&display=swap" rel="stylesheet">
 
     <style>
         :root {
             --primary: #00f2ff; 
             --secondary: #bc13fe; 
+            --accent: #00ff66;
             --bg: #030305;
             --surface: #0a0a0f;
             --text: #ffffff;
             --text-muted: #94949a;
             --grad: linear-gradient(135deg, var(--primary), var(--secondary));
-            --nav-blur: rgba(3, 3, 5, 0.75);
+            --nav-blur: rgba(3, 3, 5, 0.85);
             --font-heading: 'Syne', sans-serif;
             --font-body: 'Plus Jakarta Sans', sans-serif;
         }
 
-        /* Global Reset */
+        /* Global Structural Reset */
         * { 
             margin: 0; 
             padding: 0; 
@@ -42,15 +110,22 @@
             color: var(--text); 
             line-height: 1.6; 
             overflow-x: hidden;
+            position: relative;
         }
 
-        body.locked { 
-            overflow: hidden !important; 
-            touch-action: none; 
-            -ms-touch-action: none; 
+        /* --- Cinematic Studio Canvas Background Workspace --- */
+        #bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1;
+            background-color: #030305; 
+            pointer-events: none;
         }
 
-        /* Custom Fluid Pointer System */
+        /* Custom Fluid Target Focus Pointer System */
         #cursor {
             width: 12px; 
             height: 12px; 
@@ -73,7 +148,7 @@
             box-shadow: 0 0 20px rgba(0, 242, 255, 0.4);
         }
 
-        /* --- Immersive Circular Preloader --- */
+        /* --- Premium Re-Engineered Studio Preloader Overlay --- */
         #preloader {
             position: fixed; 
             top: 0; 
@@ -86,62 +161,102 @@
             flex-direction: column;
             justify-content: center; 
             align-items: center; 
-            transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.6s;
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.8s;
         }
         
-        .loader-circle-box { 
-            position: relative; 
-            width: 120px; 
-            height: 120px; 
-            margin-bottom: 1.5rem; 
-        }
-        
-        .loader-circle-box svg { 
-            width: 100%; 
-            height: 100%; 
-            transform: rotate(-90deg); 
-        }
-        
-        .loader-circle-box circle {
-            fill: none; 
-            stroke-width: 4;
-            stroke-linecap: round;
-        }
-        
-        .loader-circle-bg { 
-            stroke: rgba(255, 255, 255, 0.03); 
-        }
-        
-        .loader-circle-prime {
-            stroke: var(--primary); 
-            stroke-dasharray: 345; 
-            stroke-dashoffset: 345;
-            transition: stroke-dashoffset 0.05s linear; 
-            filter: drop-shadow(0 0 8px var(--primary));
-        }
-        
-        .loader-counter {
-            position: absolute; 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            height: 100%;
-            display: flex; 
-            justify-content: center; 
+        .studio-viewfinder {
+            position: relative;
+            width: min(340px, 85vw);
+            height: 180px;
+            border: 1px dashed rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            font-family: var(--font-heading); 
-            font-size: 1.2rem; 
+            margin-bottom: 2rem;
+            background: rgba(10, 10, 15, 0.6);
+            overflow: hidden;
+        }
+
+        .studio-viewfinder::before, .studio-viewfinder::after {
+            content: '';
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            border-color: rgba(255, 255, 255, 0.4);
+            border-style: solid;
+        }
+        .studio-viewfinder::before { top: 10px; left: 10px; border-width: 2px 0 0 2px; }
+        .studio-viewfinder::after { bottom: 10px; right: 10px; border-width: 0 2px 2px 0; }
+
+        .studio-audio-timeline {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            height: 45px;
+            margin-bottom: 1rem;
+        }
+
+        .audio-bar {
+            width: 3px;
+            height: 8px;
+            background: linear-gradient(to top, var(--secondary), var(--primary));
+            border-radius: 2px;
+            animation: audioPulse 0.6s ease-in-out infinite alternate;
+        }
+
+        .audio-bar:nth-child(1) { animation-delay: 0.1s; height: 18px; }
+        .audio-bar:nth-child(2) { animation-delay: 0.3s; height: 32px; }
+        .audio-bar:nth-child(3) { animation-delay: 0.5s; height: 12px; }
+        .audio-bar:nth-child(4) { animation-delay: 0.2s; height: 40px; }
+        .audio-bar:nth-child(5) { animation-delay: 0.4s; height: 26px; }
+        .audio-bar:nth-child(6) { animation-delay: 0.1s; height: 35px; }
+        .audio-bar:nth-child(7) { animation-delay: 0.6s; height: 15px; }
+
+        @keyframes audioPulse {
+            0% { transform: scaleY(0.4); opacity: 0.5; }
+            100% { transform: scaleY(1.2); opacity: 1; filter: drop-shadow(0 0 6px var(--primary)); }
+        }
+
+        .studio-counter-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-heading);
+        }
+
+        .studio-rec-dot {
+            width: 8px;
+            height: 8px;
+            background: #ff2a2a;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #ff2a2a;
+            animation: recBlink 1s infinite steps(2, start);
+        }
+
+        @keyframes recBlink { to { opacity: 0; } }
+
+        .loader-counter {
+            font-size: 1.4rem; 
             font-weight: 800; 
             color: white;
+            letter-spacing: 1px;
         }
         
         .loader-text { 
-            font-family: var(--font-heading); 
+            font-family: var(--font-body); 
             font-size: 0.75rem; 
-            letter-spacing: 4px; 
-            color: #5e5e64; 
+            font-weight: 700;
+            letter-spacing: 2px; 
+            color: var(--text-muted); 
             text-transform: uppercase; 
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
+
+        .loader-text span { color: var(--primary); }
 
         /* --- Floating Navigation Header --- */
         header {
@@ -180,7 +295,7 @@
             100% { text-shadow: 0 0 16px var(--secondary); letter-spacing: 4px; }
         }
 
-        /* --- Hamburger Trigger --- */
+        /* --- Hamburger Navigation Switch --- */
         .ham-trigger { 
             width: 28px; 
             height: 18px; 
@@ -203,7 +318,7 @@
         .ham-trigger.active span:nth-child(2) { opacity: 0; transform: translateX(-10px); }
         .ham-trigger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); background: var(--primary); }
 
-        /* --- Sidebar Navigation Overlay --- */
+        /* --- Sidebar Navigation Menu --- */
         .side-menu {
             position: fixed; 
             top: 0; 
@@ -222,8 +337,25 @@
             border-left: 1px solid rgba(255, 255, 255, 0.03);
         }
         
-        .side-menu.open { 
-            right: 0; 
+        .side-menu.open { right: 0; }
+
+        .menu-close-btn {
+            position: absolute;
+            top: 1.5rem;
+            right: 2rem;
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-family: var(--font-body);
+            font-size: 2.5rem;
+            cursor: pointer;
+            transition: color 0.3s ease, transform 0.3s ease;
+            line-height: 1;
+        }
+
+        .menu-close-btn:hover {
+            color: var(--primary);
+            transform: rotate(90deg);
         }
         
         .side-menu a { 
@@ -242,52 +374,83 @@
             transform: translateX(12px); 
         }
 
-        /* --- Core Page Modules --- */
-        section { 
-            min-height: 100vh; 
-            padding: clamp(120px, 15vh, 180px) 8% 80px; 
-            display: none; 
-        }
-        
-        section.active { 
-            display: block; 
-            animation: pageIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; 
-        }
-        
-        @keyframes pageIn { 
-            from { opacity: 0; transform: translateY(30px); } 
-            to { opacity: 1; transform: translateY(0); } 
+        /* --- Core Content Layout Architecture --- */
+        main {
+            position: relative;
+            z-index: 2; 
         }
 
-        /* Hero Styling Components */
+        section { 
+            min-height: 100vh; 
+            padding: clamp(120px, 15vh, 180px) 8% 80px;
+        }
+
         .hero-box {
+            position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
             max-width: 1000px;
             margin: 0 auto;
+            padding: 2.5rem;
+            border-radius: 20px;
+            background: rgba(10, 10, 15, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.02);
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
+        }
+
+        .hero-box:hover {
+            transform: scale(1.02);
+            background: rgba(10, 10, 15, 0.75);
+            border-color: var(--primary);
+            box-shadow: 0 20px 50px rgba(0, 242, 255, 0.15), inset 0 0 20px rgba(0, 242, 255, 0.05);
         }
 
         .hero-title { 
-            font-size: clamp(2.8rem, 7.5vw, 6rem); 
+            font-size: clamp(2rem, 8vw, 6rem); 
             font-family: var(--font-heading); 
             line-height: 1.0; 
-            margin-bottom: 2rem; 
+            margin-bottom: 1.5rem; 
             letter-spacing: -2px; 
             text-transform: uppercase;
             background: linear-gradient(180deg, #ffffff 0%, #7a7a85 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
+        .hero-trust-badge {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(0, 255, 102, 0.06);
+            padding: 0.6rem 1.4rem;
+            border-radius: 50px;
+            border: 1px solid rgba(0, 255, 102, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .hero-box:hover .hero-trust-badge {
+            border-color: var(--accent);
+            box-shadow: 0 0 15px rgba(0, 255, 102, 0.3);
+            transform: translateY(-2px);
+        }
         
         .hero-subtext { 
             font-size: clamp(1rem, 2vw, 1.25rem); 
-            color: var(--text-muted); 
+            color: var(--text); 
             max-width: 680px; 
             margin-bottom: 3rem; 
             line-height: 1.6;
-            font-weight: 300;
+            font-weight: 500;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
         }
 
         .btn-group { 
@@ -295,6 +458,7 @@
             gap: 1.2rem; 
             justify-content: center;
             width: 100%;
+            margin-bottom: 2rem;
         }
         
         .action-btn { 
@@ -311,11 +475,10 @@
             align-items: center;
             justify-content: center;
             border: none;
+            cursor: pointer;
         }
         
-        .action-btn:hover { 
-            transform: translateY(-4px); 
-        }
+        .action-btn:hover { transform: translateY(-4px); }
         
         .primary-btn { 
             background: var(--grad); 
@@ -323,49 +486,109 @@
             box-shadow: 0 10px 25px rgba(0, 242, 255, 0.25); 
         }
         
-        .primary-btn:hover {
-            box-shadow: 0 15px 30px rgba(188, 19, 254, 0.4);
-        }
+        .primary-btn:hover { box-shadow: 0 15px 30px rgba(188, 19, 254, 0.4); }
         
         .secondary-btn { 
-            border: 2px solid rgba(0, 242, 255, 0.35); 
+            border: 2px solid rgba(0, 242, 255, 0.55); 
             color: var(--primary); 
-            background: transparent; 
+            background: rgba(3, 3, 5, 0.9); 
         }
         
         .secondary-btn:hover { 
             border-color: var(--primary); 
-            background: rgba(0, 242, 255, 0.04); 
+            background: rgba(0, 242, 255, 0.08); 
         }
 
-        /* Extension Reveal Component */
-        #home-extension { 
-            max-height: 0;
-            opacity: 0; 
-            visibility: hidden; 
-            transition: max-height 1.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 1s ease, visibility 1s; 
-            margin-top: 4rem;
+        .home-extension { 
+            margin-top: 6rem;
             width: 100%;
-            overflow: hidden;
-        }
-        
-        #home-extension.unlocked { 
-            max-height: 2000px;
-            opacity: 1; 
-            visibility: visible; 
         }
 
         .synergy-block {
-            border-top: 1px solid rgba(255,255,255,0.04); 
-            padding-top: 6rem;
+            background: rgba(10, 10, 15, 0.95);
+            border: 1px solid rgba(255,255,255,0.04); 
+            padding: 4rem 3rem;
+            border-radius: 12px;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             text-align: left;
             align-items: center;
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.5s ease, box-shadow 0.5s ease;
         }
 
-        /* --- Premium Packages Grid --- */
+        .synergy-block:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: var(--secondary);
+            box-shadow: 0 25px 60px rgba(188, 19, 254, 0.2), inset 0 0 30px rgba(188, 19, 254, 0.03);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .portfolio-card {
+            background: rgba(10, 10, 15, 0.96);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 1.25rem;
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.5s ease, box-shadow 0.5s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: var(--primary);
+            box-shadow: 0 20px 45px rgba(0, 242, 255, 0.2);
+        }
+
+        .video-embed-frame {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #050508;
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.02);
+            margin-bottom: 1.5rem;
+        }
+
+        .video-embed-frame iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .portfolio-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.5px;
+        }
+
+        .portfolio-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+        }
+
+        .portfolio-links-hub {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 3rem;
+            width: 100%;
+        }
+
+        /* --- Pricing Grid Components --- */
         .package-grid { 
             display: grid; 
             grid-template-columns: repeat(3, 1fr); 
@@ -375,29 +598,50 @@
         }
         
         .package-card { 
-            background: var(--surface); 
+            background: rgba(10, 10, 15, 0.95); 
             padding: 4rem 2.5rem; 
             border-radius: 24px; 
-            border: 1px solid rgba(255,255,255,0.03); 
-            transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            border: 1px solid rgba(255,255,255,0.04); 
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.5s ease, box-shadow 0.5s ease;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             text-align: center;
+            position: relative;
         }
         
         .package-card:hover { 
+            transform: translateY(-10px) scale(1.03);
             border-color: var(--secondary); 
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(188, 19, 254, 0.05);
+            box-shadow: 0 25px 50px rgba(188, 19, 254, 0.25);
         }
         
         .package-card.premium-tier {
-            border-color: rgba(0, 242, 255, 0.2);
+            border-color: rgba(0, 242, 255, 0.15);
+            background: rgba(12, 12, 20, 0.98);
         }
         
-        .package-card.premium-tier:hover {
-            border-color: var(--primary);
+        .package-card.premium-tier:hover { 
+            border-color: var(--primary); 
+            box-shadow: 0 25px 50px rgba(0, 242, 255, 0.25);
+        }
+
+        .package-badge {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(90deg, var(--secondary), var(--primary));
+            color: #030305;
+            padding: 0.4rem 1.2rem;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0, 242, 255, 0.3);
+            font-family: var(--font-body);
+            white-space: nowrap;
         }
         
         .package-card h3 { 
@@ -408,12 +652,10 @@
             color: var(--text-muted);
         }
         
-        .package-card.premium-tier h3 {
-            color: var(--primary);
-        }
+        .package-card.premium-tier h3 { color: var(--primary); }
         
         .package-price { 
-            font-size: 3.5rem; 
+            font-size: clamp(2rem, 8vw, 3.5rem); 
             font-weight: 800; 
             margin-bottom: 2rem; 
             color: var(--text); 
@@ -439,8 +681,8 @@
         }
         
         .package-features li { 
-            color: #a4a4ac; 
-            border-bottom: 1px solid rgba(255,255,255,0.02); 
+            color: #bcbcc4; 
+            border-bottom: 1px solid rgba(255,255,255,0.03); 
             padding-bottom: 0.5rem; 
             font-size: 0.95rem;
             display: flex;
@@ -453,17 +695,16 @@
             color: var(--primary);
             font-weight: bold;
         }
-        
-        .package-card .action-btn {
-            width: 100%;
-        }
 
-        /* --- Content Layout Refinements --- */
         .generic-title-block {
             margin-bottom: 4rem;
+            background: rgba(3, 3, 5, 0.85);
+            padding: 1.5rem;
+            border-radius: 8px;
+            display: inline-block;
         }
         
-        .generic-title-block h1 {
+        .generic-title-block h2 {
             font-family: var(--font-heading);
             font-size: clamp(2.5rem, 6vw, 4rem);
             letter-spacing: -1px;
@@ -478,7 +719,7 @@
 
         .text-block p { 
             margin-bottom: 1.8rem; 
-            color: #bcbcc4; 
+            color: #e2e2e8; 
             font-size: 1.1rem; 
             max-width: 850px; 
             line-height: 1.8; 
@@ -491,11 +732,12 @@
         }
         
         .review-card { 
-            background: var(--surface); 
+            background: rgba(10, 10, 15, 0.96); 
             padding: 3.5rem 2.5rem; 
-            border-radius: 4px; 
+            border-radius: 6px; 
             position: relative;
-            transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1); 
+            border: 1px solid rgba(255,255,255,0.02);
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.5s ease, box-shadow 0.5s ease;
         }
         
         .review-card::before {
@@ -509,14 +751,15 @@
         }
         
         .review-card:hover { 
-            transform: translateY(-4px); 
-            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+            transform: translateY(-6px) scale(1.02); 
+            border-color: rgba(0, 242, 255, 0.3);
+            box-shadow: 0 20px 45px rgba(0, 242, 255, 0.12);
         }
         
         .review-card p { 
             font-style: italic; 
             margin-bottom: 2rem; 
-            color: #c0c0c7; 
+            color: #d1d1d8; 
             font-size: 1.1rem; 
             line-height: 1.6;
         }
@@ -530,84 +773,6 @@
             display: block;
         }
 
-        /* FAQ System Archetype */
-        .faq-container {
-            max-width: 850px;
-        }
-        
-        .faq-item { 
-            background: var(--surface); 
-            padding: 2rem; 
-            border-radius: 4px; 
-            border: 1px solid rgba(255,255,255,0.03); 
-            margin-bottom: 1.5rem; 
-            transition: 0.3s cubic-bezier(0.16, 1, 0.3, 1); 
-        }
-        
-        .faq-item:hover { 
-            border-color: var(--primary); 
-            transform: translateX(6px); 
-        }
-        
-        .faq-item h4 { 
-            color: var(--text); 
-            font-family: var(--font-heading); 
-            margin-bottom: 0.75rem; 
-            font-size: 1.25rem; 
-        }
-        
-        .faq-item p { 
-            color: var(--text-muted); 
-            font-size: 1rem;
-        }
-
-        /* --- Editorial Blog Layer --- */
-        .blog-container { 
-            max-width: 900px; 
-            display: flex;
-            flex-direction: column;
-            gap: 4rem;
-        }
-        
-        .blog-card { 
-            background: var(--surface); 
-            padding: 4rem 3rem; 
-            border-radius: 4px; 
-            border: 1px solid rgba(255,255,255,0.02); 
-            transition: 0.3s cubic-bezier(0.16, 1, 0.3, 1); 
-        }
-        
-        .blog-card:hover { 
-            border-color: rgba(0, 242, 255, 0.15); 
-        }
-        
-        .blog-card h2 { 
-            font-family: var(--font-heading); 
-            font-size: clamp(1.8rem, 4vw, 2.4rem); 
-            margin-bottom: 1.5rem; 
-            color: var(--text); 
-            line-height: 1.2; 
-            letter-spacing: -0.5px; 
-        }
-        
-        .blog-card h3 { 
-            color: var(--primary); 
-            font-family: var(--font-heading); 
-            margin: 2.5rem 0 1rem; 
-            font-size: 1.4rem; 
-        }
-        
-        .blog-card ul { 
-            margin-bottom: 1.5rem; 
-            padding-left: 1.2rem; 
-            color: var(--text-muted); 
-        }
-        
-        .blog-card li { 
-            margin-bottom: 0.75rem; 
-            font-size: 1.05rem;
-        }
-        
         .blog-tag { 
             color: var(--secondary); 
             font-weight: 800; 
@@ -618,26 +783,26 @@
             text-transform: uppercase; 
         }
 
-        /* --- Secure Secret Dynamic Interface --- */
         #secret-page { 
             max-width: 800px; 
             margin: 0 auto; 
             width: 100%; 
+            display: none;
         }
         
         .secret-card {
-            background: var(--surface);
+            background: rgba(10, 10, 15, 0.97);
             padding: clamp(3rem, 8vw, 5rem) clamp(1.5rem, 5vw, 3.5rem);
-            border-radius: 8px;
-            border: 1px solid rgba(0, 242, 255, 0.2);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+            border-radius: 12px;
+            border: 1px solid rgba(0, 242, 255, 0.3);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
             text-align: center;
         }
 
         .summary-details {
-            background: rgba(255, 255, 255, 0.01);
-            border: 1px solid rgba(255, 255, 255, 0.04);
-            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 6px;
             padding: 2rem;
             margin: 2.5rem 0 3rem;
             text-align: left;
@@ -647,7 +812,7 @@
             display: flex;
             justify-content: space-between;
             padding: 0.85rem 0;
-            border-bottom: 1px solid rgba(255,255,255,0.03);
+            border-bottom: 1px solid rgba(255,255,255,0.04);
         }
 
         .summary-row:last-child { border-bottom: none; }
@@ -655,11 +820,13 @@
         .summary-value { font-weight: 700; color: var(--text); }
         .summary-value.highlight { color: var(--primary); }
 
-        /* --- High-End Refined Footer System --- */
+        /* --- Footer Architecture --- */
         footer { 
             background: #050508; 
             padding: 6rem 6% 3rem; 
-            border-top: 1px solid rgba(255, 255, 255, 0.04); 
+            border-top: 1px solid rgba(255, 255, 255, 0.05); 
+            position: relative;
+            z-index: 2;
         }
         
         .footer-grid { 
@@ -680,7 +847,7 @@
         }
         
         .footer-col p { 
-            color: #787880; 
+            color: #94949a; 
             font-size: 0.95rem; 
             max-width: 320px; 
             line-height: 1.6; 
@@ -696,16 +863,11 @@
             margin-bottom: 1.8rem; 
         }
         
-        .footer-col ul { 
-            list-style: none; 
-        }
-        
-        .footer-col li { 
-            margin-bottom: 1rem; 
-        }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 1rem; }
         
         .footer-col a { 
-            color: #94949a; 
+            color: #a4a4ac; 
             text-decoration: none; 
             font-size: 0.95rem; 
             transition: all 0.3s ease; 
@@ -720,7 +882,7 @@
         .footer-bottom { 
             margin-top: 5rem; 
             padding-top: 2rem; 
-            border-top: 1px solid rgba(255, 255, 255, 0.03); 
+            border-top: 1px solid rgba(255, 255, 255, 0.05); 
             display: flex; 
             justify-content: space-between; 
             align-items: center; 
@@ -729,12 +891,12 @@
         }
         
         .footer-bottom p { 
-            color: #48484f; 
+            color: #5e5e64; 
             font-size: 0.85rem; 
             letter-spacing: 1px; 
         }
 
-        /* --- Complete Mobile & Responsive Architecture --- */
+        /* --- Mobile & Structural Responsiveness --- */
         @media (max-width: 1024px) {
             section { padding: 130px 6% 60px; }
             .package-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
@@ -746,22 +908,25 @@
             header { padding: 0.7rem 5%; }
             
             .side-menu { width: 100%; right: -100%; padding: 8rem 2rem 2rem; border-left: none; } 
+            .menu-close-btn { top: 1.2rem; right: 1.5rem; }
             section { padding: 110px 5% 60px; }
             
             .hero-title { line-height: 1.1; margin-bottom: 1.5rem; }
             .hero-subtext { margin-bottom: 2.5rem; }
             
-            .btn-group { flex-direction: column; gap: 1rem; }
+            .btn-group { flex-direction: column; gap: 1rem; margin-bottom: 1.5rem; }
             .action-btn { width: 100%; padding: 1.1rem 2rem; }
             
-            .synergy-block { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; }
+            .synergy-block { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; padding: 2.5rem 1.5rem; }
+            
+            .portfolio-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .portfolio-links-hub { flex-direction: column; gap: 1rem; }
             
             .package-grid { grid-template-columns: 1fr; gap: 2rem; }
             .package-card { padding: 3.5rem 2rem; }
             
             .review-grid { grid-template-columns: 1fr; gap: 2rem; }
             .review-card { padding: 2.5rem 1.8rem; }
-            .blog-card { padding: 3rem 1.5rem; }
             
             .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; }
             .footer-col p { margin: 0 auto; }
@@ -769,61 +934,71 @@
         }
     </style>
 </head>
-<body class="locked">
+<body>
 
+    <canvas id="bg-canvas"></canvas>
     <div id="cursor"></div>
 
     <div id="preloader">
-        <div class="loader-circle-box">
-            <svg>
-                <circle class="loader-circle-bg" cx="60" cy="60" r="55"></circle>
-                <circle id="progressCircle" class="loader-circle-prime" cx="60" cy="60" r="55"></circle>
-            </svg>
-            <div id="loadingNum" class="loader-counter">00%</div>
+        <div class="studio-viewfinder">
+            <div class="studio-audio-timeline">
+                <div class="audio-bar"></div>
+                <div class="audio-bar"></div>
+                <div class="audio-bar"></div>
+                <div class="audio-bar"></div>
+                <div class="audio-bar"></div>
+                <div class="audio-bar"></div>
+                <div class="audio-bar"></div>
+            </div>
+            
+            <div class="studio-counter-row">
+                <div class="studio-rec-dot"></div>
+                <div id="loadingNum" class="loader-counter">00%</div>
+            </div>
         </div>
-        <div class="loader-text">Initializing Engine</div>
+        <div class="loader-text">Studio Core: <span id="statusMessage">Initializing Engine</span></div>
     </div>
 
     <header>
-        <a href="#home" class="logo-link" onclick="navTo('#home')">
+        <a href="#home" class="logo-link" title="Night Pixel Studios Home Page Navigation">
             <span class="logo-text">NIGHT PIXEL</span>
         </a>
-        <div class="ham-trigger" id="hamBtn">
+        <div class="ham-trigger" id="hamBtn" aria-label="Open Site Navigation Menu" role="button">
             <span></span><span></span><span></span>
         </div>
     </header>
 
-    <nav class="side-menu" id="sideMenu">
-        <a href="#home" onclick="navTo('#home')">Home</a>
-        <a href="#about" onclick="navTo('#about')">About Us</a>
-        <a href="#blog" onclick="navTo('#blog')">Blogs</a>
-        <a href="#reviews" onclick="navTo('#reviews')">Reviews</a>
-        <a href="#faq" onclick="navTo('#faq')">FAQ</a>
-        <a href="#hire" onclick="navTo('#hire')">Hire Us</a>
+    <nav class="side-menu" id="sideMenu" aria-label="Main Navigation Menu Links Panel">
+        <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close Site Navigation Menu">&times;</button>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#portfolio">Our Portfolio</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#hire">Hire Us</a>
     </nav>
 
     <main>
         
-        <section id="home" class="active">
+        <section id="home">
             <div class="hero-box">
-                <p style="color: var(--primary); font-weight: 700; letter-spacing: 4px; margin-bottom: 1.2rem; font-size: 0.8rem; text-transform: uppercase;">NIGHT PIXEL STUDIOS</p>
-                <h1 class="hero-title">ENGINEERING<br>MOTION.</h1>
-                <p class="hero-subtext">Blending high-retention storytelling with surgical precision. We transform raw concepts into digital landmarks that command attention and drive results.</p>
+                <div class="hero-trust-badge">FOR CREATORS BY CREATORS ⭐⭐⭐⭐⭐</div>
+                <h1 class="hero-title">Hire Professional Video Editors</h1>
+                <p class="hero-subtext">Blending viral high-retention video production techniques with surgical frame precision. When you hire a professional YouTube video editor or custom anime music video compilation production specialist from our desk, we transform raw digital sequences into premium assets that maximize platform analytics.</p>
                 <div class="btn-group">
-                    <button class="action-btn primary-btn" id="viewMoreBtn">View More</button>
-                    <button class="action-btn secondary-btn" onclick="navTo('#hire')">Hire Us</button>
+                    <a href="#portfolio" class="action-btn primary-btn" title="Explore Video Portfolio">Explore Studio</a>
+                    <a href="#hire" class="action-btn secondary-btn" title="Hire Professional Editors Now">Hire Us</a>
                 </div>
             </div>
 
-            <div id="home-extension">
+            <div class="home-extension">
                 <div class="synergy-block" id="synergyTarget">
                     <div>
-                        <h3 style="color: var(--primary); font-family: var(--font-heading); font-size: clamp(1.8rem, 4vw, 2.5rem); line-height: 1.2; letter-spacing: -0.5px; text-transform: uppercase;">Surgical Precision Meets Creative Synergy</h3>
+                        <h2 style="color: var(--primary); font-family: var(--font-heading); font-size: clamp(1.8rem, 4vw, 2.5rem); line-height: 1.2; letter-spacing: -0.5px; text-transform: uppercase;">High-Retention Video Editing Services & Velocity Transition Pacing</h2>
                     </div>
                     <div class="text-block">
-                        <p>At Night Pixel, every project is approached as a unique ecosystem. We focus on how things feel as much as how they function, ensuring a consistent rhythm defines the experience.</p>
-                        <p>Our measured approach supports outcomes that feel cohesive and intentional, without unnecessary excess. We value patience and precision above all else.</p>
-                        <button class="action-btn secondary-btn" style="margin-top: 1rem;" onclick="navTo('#about')">The Full Story</button>
+                        <p>At Night Pixel, every motion project is approached as a custom ecosystem. We focus on how digital sequences move, transition, and sync with audio layers, ensuring high-fidelity velocity transition pacing defines the viewer experience. When you hire a video editor from our team, you receive world-class production execution natively configured for peak audience attention retention maps.</p>
+                        <p>Our frame-by-frame measured approach supports channel outcomes that feel completely cohesive and intentional. We value cinematic rhythm, timeline clarity, and professional-grade color profiles above all else.</p>
+                        <a href="#about" class="action-btn secondary-btn" style="margin-top: 1rem;" title="Read the Full Story of Night Pixel Editorial House">The Full Story</a>
                     </div>
                 </div>
             </div>
@@ -832,215 +1007,160 @@
         <section id="about">
             <div class="generic-title-block">
                 <div class="blog-tag" style="margin-bottom: 0.5rem;">THE ARCHITECTURE</div>
-                <h1>About Us</h1>
-                <p>This space exists to explore ideas and give them form. It is shaped by curiosity, intention, and a quiet respect for the process of creation.</p>
+                <h2>About Our Video Editing Services</h2>
+                <p>This space exists to explore advanced video editing ideas and give them physical form. It is shaped by continuous curiosity and surgical narrative pacing maps.</p>
             </div>
-            <div class="text-block" style="background: var(--surface); padding: clamp(2rem, 5vw, 3.5rem); border-radius: 4px; border: 1px solid rgba(255,255,255,0.02);">
-                <p>Rather than following a fixed path, the work here is guided by adaptability. Each project is approached as its own environment, where direction emerges through observation, refinement, and thoughtful choices. This flexibility allows room for evolution while maintaining clarity and balance.</p>
-                <p>Attention is placed on how things feel as much as how they function. Subtle details, measured decisions, and a consistent rhythm define the experience. The focus remains on building work that feels deliberate, composed, and grounded.</p>
-                <p>The process values patience and precision. Ideas are allowed the time they need to develop, shaped through iteration rather than assumption. This measured approach supports outcomes that feel cohesive and intentional, without unnecessary excess.</p>
-                <p>At its core, this platform is about creating with purpose. It serves as a place where form and function meet quietly, leaving space for interpretation while maintaining a strong sense of direction.</p>
+            <div class="text-block" style="background: rgba(10, 10, 15, 0.96); padding: clamp(2rem, 5vw, 3.5rem); border-radius: 6px; border: 1px solid rgba(255,255,255,0.03); transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.5s ease, box-shadow 0.5s ease;" onmouseenter="this.style.transform='translateY(-6px) scale(1.01)'; this.style.borderColor='var(--primary)'; this.style.boxShadow='0 20px 45px rgba(0, 242, 255, 0.12)';" onmouseleave="this.style.transform='none'; this.style.borderColor='rgba(255,255,255,0.03)'; this.style.boxShadow='none';">
+                <p>Rather than following a fixed path, the work here is guided by extreme adaptability. Each video asset project is treated as its own unique digital environment, where tracking vectors and cinematic velocity transitions emerge through continuous metric observation, technical refinement, and thoughtful workflow configuration changes. This strategic flexibility allows wide room for premium creative development while maintaining strict timeline balance for anyone looking to hire an anime video editor, professional YouTube creator, or custom motion graphics specialist.</p>
+                <p>Meticulous attention is placed on how specific keyframes feel as much as how they function on an active video timeline layout. Subtle velocity ramp adjustments, clean cross-frame transitions, and a consistent rhythmic audio spectrum define the core studio experience. The target remains locked on building video assets that feel completely deliberate, structurally composed, and visually grounded across modern media networks.</p>
+                <p>Our editing pipeline values immense patience and timeline accuracy. Creative video briefs are allowed the necessary technical room to evolve, shaped through intense preview iteration cycles rather than general layout assumptions. This measured engineering setup supports channel outcomes that naturally scale viewer interaction metrics without unexpected playback drops or timeline visual noise.</p>
+                <p>At its core, this platform is about creating with precise visual intent. It serves as an optimized digital workspace where professional media software configuration parameters meet quietly, leaving clear room for creative asset transformation while maintaining a heavy structural performance vector.</p>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <div class="generic-title-block">
+                <div class="blog-tag" style="margin-bottom: 0.5rem;">WORK DISPLAY</div>
+                <h2>Portfolio: Professional Video Editing & AMV Showcase</h2>
+                <p>Explore elite production clips built for maximum runtime engagement, seamless tracking curves, and fluid typography motion graphics configuration arrays.</p>
+            </div>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <div class="video-embed-frame">
+                        <iframe src="https://www.youtube.com/embed/FkD7JAFopZ0" title="Night Pixel Premium AMV Production Velocity Transition Showcase" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3>Elite AMV Velocity Control</h3>
+                    <p>Surgical tracking cuts paired directly with rhythmic velocity modifications. Designed to retain viewer interest through shifting song beats.</p>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="video-embed-frame">
+                        <iframe src="https://www.youtube.com/embed/ulAyzq2EguI" title="Night Pixel Social Media Narrative Retention Optimization Blueprint" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3>High-Retention Platform Editing</h3>
+                    <p>Optimized spacing arrays crafted for social media distribution channels. Features custom sound textures and stylized graphic typography.</p>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="video-embed-frame">
+                        <iframe src="https://www.youtube.com/embed/JBYnI34o6pI" title="Night Pixel Advanced Cinematic Color Grading and FX Compositing Asset" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3>Cinematic Narrative Composite</h3>
+                    <p>Deep color space corrections paired with tracking lens fx vectors. Engineered for complex atmospheric visual presentation layouts.</p>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="video-embed-frame">
+                        <iframe src="https://www.youtube.com/embed/u5T8oAWSpD4" title="Night Pixel High-Impact Action Dynamic Frame Composition asset" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3>Dynamic Structural Motion</h3>
+                    <p>High-energy visual pacing architecture configured with deep multi-layered kinetic masking pipelines and clean layout rendering loops.</p>
+                </div>
+            </div>
+
+            <div class="portfolio-links-hub">
+                <a href="https://www.youtube.com/@thenightpixel" target="_blank" class="action-btn secondary-btn" title="Visit our official YouTube Channel Blueprint Archive">
+                    <span style="color: #ff0000; font-weight: bold; margin-right: 6px;">▶</span> YouTube Channel
+                </a>
+                <a href="https://www.instagram.com/thenightpixel" target="_blank" class="action-btn secondary-btn" title="Explore our creative design reels index on Instagram">
+                    <span style="color: #bc13fe; font-weight: bold; margin-right: 6px;">📸</span> Instagram Portfolio
+                </a>
             </div>
         </section>
 
         <section id="reviews">
             <div class="generic-title-block">
                 <div class="blog-tag" style="margin-bottom: 0.5rem;">PROVEN VALIDATION</div>
-                <h1>Global Feedback</h1>
-                <p>Vetted responses from content creators and enterprise clients operating at global scale.</p>
+                <h2>Global Feedback from Content Creators</h2>
+                <p>Vetted responses from professional content creators and media enterprises operating at worldwide scale.</p>
             </div>
             <div class="review-grid">
                 <div class="review-card">
-                    <p>"The retention on my series went from 20% to 55% in a single week. Night Pixel understands the rhythm of the modern viewer."</p>
-                    <span>— Rohan Sharma</span>
-                </div>
-                <div class="review-card" style="border-color: var(--secondary);">
-                    <p>"Surgical precision. They cut the fluff and left only the gold. Absolute game-changers for my brand."</p>
-                    <span>— James Abernathy</span>
+                    <p>"The audience retention on my custom video series went from 20% to 55% in a single week. Night Pixel understands the exact timeline rhythm required for modern viewers."</p>
+                    <span>— Gaming Content Creator</span>
                 </div>
                 <div class="review-card">
-                    <p>"Fast, professional, and creatively superior. They turned a basic vlog into a cinematic masterpiece."</p>
-                    <span>— Ananya Iyer</span>
+                    <p>"Surgical timeline precision. They cut the video fluff and left only high-engagement gold. Absolute game-changers for my brand distribution pipelines."</p>
+                    <span>— Anime Content Strategist</span>
                 </div>
-                <div class="review-card" style="border-color: var(--secondary);">
-                    <p>"Night Pixel isn't just an editorial house; they are visual engineers. The best investment I've made this year."</p>
-                    <span>— Sarah Thompson</span>
+                <div class="review-card">
+                    <p>"Fast, professional, and creatively superior editing. They turned a basic raw vlog sequence into a cinematic storytelling masterpiece."</p>
+                    <span>— YouTube Channel Lead</span>
                 </div>
-            </div>
-        </section>
-
-        <section id="faq">
-            <div class="generic-title-block">
-                <div class="blog-tag" style="margin-bottom: 0.5rem;">RESOLVING DISCREPANCIES</div>
-                <h1>F.A.Q.</h1>
-                <p>Answering foundational process queries, output extensions, and editing parameters.</p>
-            </div>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <h4>What type of editing do you offer?</h4>
-                    <p>The editing process is flexible and adapts to the needs of each project. The focus is on refinement, structure, and overall clarity rather than a fixed style or format.</p>
+                <div class="review-card">
+                    <p>"Night Pixel isn't just an editorial house; they are literal visual engineers. The best high-retention video asset investment I've made all year."</p>
+                    <span>— Boutique Agency Owner</span>
                 </div>
-                <div class="faq-item">
-                    <h4>How does the editing process usually work?</h4>
-                    <p>Editing begins with reviewing the provided material and understanding its context. Adjustments are made gradually, allowing the work to evolve through careful revision and attention to detail.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Can edits be adjusted after delivery?</h4>
-                    <p>Revisions can be discussed to ensure the final output aligns with the intended direction. The goal is to maintain consistency while allowing space for refinement where necessary.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Do you follow a specific editing style or standard?</h4>
-                    <p>No single standard defines the process. Each project is treated individually, with editing choices guided by tone, structure, and purpose rather than preset rules.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>What file formats are supported for editing?</h4>
-                    <p>Commonly used formats are accepted to keep the workflow smooth and accessible. Specific format preferences can be accommodated when shared in advance.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="blog">
-            <div class="generic-title-block">
-                <div class="blog-tag" style="margin-bottom: 0.5rem;">THE REPOSITORY</div>
-                <h1>Insights & Articles</h1>
-                <p>Deconstructing modern digital metrics, video trends, and engagement psychology logic patterns.</p>
-            </div>
-            
-            <div class="blog-container">
-                <article class="blog-card">
-                    <span class="blog-tag">📌 Insights • Guide</span>
-                    <h2>What Is an AMV? A Complete Guide for Anime Fans & Creators</h2>
-                    <div class="text-block">
-                        <p>Anime Music Videos, commonly known as AMVs, are creative video edits made by combining anime clips with music. Over the years, AMVs have evolved from simple fan edits into cinematic, emotionally driven visual stories that attract millions of views across YouTube, Instagram, and TikTok.</p>
-                        <p>An AMV is not just about placing music over anime scenes. A high-quality AMV tells a story, matches emotions, and keeps viewers hooked through perfect timing and visuals.</p>
-                        
-                        <h3>🎥 What Makes an AMV Special?</h3>
-                        <p>A great AMV focuses on:</p>
-                        <ul>
-                            <li>Music synchronization with action and emotion</li>
-                            <li>Scene selection that matches the song’s mood</li>
-                            <li>Smooth transitions and effects</li>
-                            <li>Storytelling through visuals</li>
-                        </ul>
-                        <p>AMVs can be action-packed, emotional, romantic, or motivational — depending on the music and editing style.</p>
-
-                        <h3>🎶 Why AMVs Are So Popular</h3>
-                        <p>AMVs allow anime fans to relive powerful moments in a new way. Music amplifies emotions, making fight scenes more intense and sad scenes more heartbreaking. This is why AMVs perform extremely well on social media platforms.</p>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <span class="blog-tag">📌 Insights • Workflow</span>
-                    <h2>AMV Editing Process: From Anime Clips to Final Video</h2>
-                    <div class="text-block">
-                        <p>Ever wondered how a professional AMV is created from start to finish? A clean, engaging AMV is the result of a structured editing process that focuses on rhythm, emotion, and visual impact.</p>
-                        
-                        <h3>🧠 Step 1: Concept & Music Selection</h3>
-                        <p>Everything starts with the music. The song determines: Mood, Pace, and Emotional tone. Once the music is chosen, the editor plans the story or theme of the AMV.</p>
-                        
-                        <h3>🎞️ Step 2: Clip Selection</h3>
-                        <p>Relevant anime clips are carefully selected to match: Lyrics, Beat drops, and Emotional highs/lows. This step is crucial — random clips can ruin the flow of an AMV.</p>
-                        
-                        <h3>⏱️ Step 3: Beat Sync & Timing</h3>
-                        <p>Professional editors sync cuts, transitions, and effects perfectly with the music. Beat sync is what gives AMVs their addictive rhythm.</p>
-                        
-                        <h3>🎨 Step 4: Effects & Color Grading</h3>
-                        <ul>
-                            <li>Motion blur tracking vectors</li>
-                            <li>Glitch or cinematic visual effects</li>
-                            <li>Color correction & high-fidelity grading</li>
-                            <li>Camera shakes, offsets, and zooms</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <span class="blog-tag">📌 Insights • Strategy</span>
-                    <h2>Why Hire a Professional Anime Video Editor Instead of DIY</h2>
-                    <div class="text-block">
-                        <p>Many creators start editing AMVs on their own — and that’s great. But as your goals grow, professional anime editing services become essential.</p>
-                        
-                        <h3>⚠️ Limitations of DIY Editing</h3>
-                        <p>DIY AMVs often struggle with: Weak transitions, Poor color quality, Off-beat timing, and Overused effects. These issues can reduce viewer retention and engagement.</p>
-                        
-                        <h3>✅ Benefits of Professional Anime Editing</h3>
-                        <ul>
-                            <li>Industry-level visual tracking effects</li>
-                            <li>Perfect frame-accurate music synchronization</li>
-                            <li>High-resolution raw file outputs</li>
-                            <li>Faster turnaround delivery pipelines</li>
-                            <li>Consistent artistic channel branding style</li>
-                        </ul>
-                    </div>
-                </article>
             </div>
         </section>
 
         <section id="hire">
-            <div class="generic-title-block" style="text-align: center;">
+            <div class="generic-title-block" style="text-align: center; display: block; margin: 0 auto 4rem;">
                 <div class="blog-tag" style="margin-bottom: 0.5rem;">OPERATIONAL FRAMEWORKS</div>
-                <h1>Select Your Tier</h1>
-                <p>Professional motion solutions configured to secure absolute retention performance rules.</p>
+                <h2>Select Your Studio Production Tier</h2>
+                <p>Professional video editing and motion graphic solutions calibrated to lock down absolute viewer retention thresholds.</p>
             </div>
 
             <div class="package-grid">
                 <div class="package-card">
                     <div>
-                        <h3>ESSENTIAL</h3>
+                        <h3>Night Pixel Essential Package</h3>
                         <div class="package-price">₹299 <span>/project</span></div>
                         <ul class="package-features">
-                            <li>Core Visual Editing</li>
-                            <li>Standard Motion Integration</li>
-                            <li>Rhythmic Sound Alignment</li>
-                            <li>Project Export Optimization</li>
-                            <li>Standard Turnaround</li>
+                            <li>Core Visual Timeline Editing</li>
+                            <li>Standard Motion Transition Mapping</li>
+                            <li>Rhythmic Sound Alignment Tuning</li>
+                            <li>Project Export & Pipeline Optimization</li>
+                            <li>Standard Studio Turnaround Delivery</li>
                         </ul>
                     </div>
-                    <button class="action-btn secondary-btn" onclick="openSecretPage('Essential', '₹299', ['Core Visual Editing', 'Standard Motion Integration', 'Rhythmic Sound Alignment', 'Project Export Optimization', 'Standard Turnaround'])">Select Package</button>
+                    <button class="action-btn secondary-btn" onclick="openSecretPage('Essential', '₹299', ['Core Visual Timeline Editing', 'Standard Motion Transition Mapping', 'Rhythmic Sound Alignment Tuning', 'Project Export & Pipeline Optimization', 'Standard Studio Turnaround Delivery'])">Select Package</button>
                 </div>
 
                 <div class="package-card premium-tier">
+                    <div class="package-badge">🔥 Most Popular</div>
                     <div>
-                        <h3>ADVANCED</h3>
+                        <h3>Night Pixel Advanced Package</h3>
                         <div class="package-price">₹449 <span>/project</span></div>
                         <ul class="package-features">
-                            <li>Dynamic Visual Engineering</li>
-                            <li>Enhanced Motion Sequences</li>
-                            <li>Advanced Audio Mastering</li>
-                            <li>Detailed Color Grading</li>
-                            <li>Priority Processing</li>
+                            <li>Dynamic Visual Engineering Setups</li>
+                            <li>Enhanced Velocity Motion Sequences</li>
+                            <li>Advanced Track Audio Multi-Mastering</li>
+                            <li>Detailed Color Grading & LUT Logs</li>
+                            <li>Priority Studio Pipeline Processing</li>
                         </ul>
                     </div>
-                    <button class="action-btn primary-btn" onclick="openSecretPage('Advanced', '₹449', ['Dynamic Visual Engineering', 'Enhanced Motion Sequences', 'Advanced Audio Mastering', 'Detailed Color Grading', 'Priority Processing'])">Select Package</button>
+                    <button class="action-btn primary-btn" onclick="openSecretPage('Advanced', '₹449', ['Dynamic Visual Engineering Setups', 'Enhanced Velocity Motion Sequences', 'Advanced Track Audio Multi-Mastering', 'Detailed Color Grading & LUT Logs', 'Priority Studio Pipeline Processing'])">Select Package</button>
                 </div>
 
                 <div class="package-card">
                     <div>
-                        <h3>PREMIUM</h3>
+                        <h3>Night Pixel Premium Package</h3>
                         <div class="package-price">₹499 <span>/project</span></div>
                         <ul class="package-features">
-                            <li>Comprehensive Visual Direction</li>
-                            <li>Premium Motion Effects</li>
-                            <li>Immersive Soundscapes</li>
-                            <li>High-Fidelity Finishing</li>
-                            <li>Expedited Delivery</li>
+                            <li>Comprehensive Cinematic Direction Maps</li>
+                            <li>Premium Composite Motion Visual FX</li>
+                            <li>Immersive Soundscape Engineering</li>
+                            <li>High-Fidelity Finishing & Master Rendering</li>
+                            <li>Expedited Express Studio Delivery</li>
                         </ul>
                     </div>
-                    <button class="action-btn secondary-btn" onclick="openSecretPage('Premium', '₹499', ['Comprehensive Visual Direction', 'Premium Motion Effects', 'Immersive Soundscapes', 'High-Fidelity Finishing', 'Expedited Delivery'])">Select Package</button>
+                    <button class="action-btn secondary-btn" onclick="openSecretPage('Premium', '₹499', ['Comprehensive Cinematic Direction Maps', 'Premium Composite Motion Visual FX', 'Immersive Soundscape Engineering', 'High-Fidelity Finishing & Master Rendering', 'Expedited Express Studio Delivery'])">Select Package</button>
                 </div>
             </div>
 
-            <div style="max-width: 850px; margin: 6rem auto 0; background: var(--surface); padding: 4rem 2rem; border-radius: 4px; border: 1px solid rgba(0, 242, 255, 0.08); text-align: center;">
-                <h3 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 1rem;">The Night Pixel Standard</h3>
-                <p style="color: var(--text-muted); margin-bottom: 2.5rem; max-width: 550px; margin-left: auto; margin-right: auto;">Every tier includes our strict commitment to technical precision, quality metrics, and clear client channel communications.</p>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nicks09902@gmail.com&su=Custom%20Motion%20Project%20Inquiry%20-%20Night%20Pixel%20Studios&body=Hi%20Night%20Pixel%20Team%2C%0A%0AI%20am%20reaching%20out%20to%20start%20a%20new%20custom%20motion%20graphics%20or%20editing%20project%20with%20your%20studio.%20I%20would%20like%20to%20discuss%20the%20creative%20brief%2C%20assets%2C%20and%20timeline%20requirements%20to%20kick%20off%20production.%0A%0APlease%20let%20me%20know%20your%20current%20onboarding%20availability%20and%20the%20next%20steps.%0A%0ABest%20regards%2C" target="_blank" class="action-btn primary-btn" style="font-size: 0.9rem;">Custom Inquiry Slot</a>
+            <div style="max-width: 850px; margin: 6rem auto 0; background: rgba(10, 10, 15, 0.96); padding: 4rem 2rem; border-radius: 6px; border: 1px solid rgba(0, 242, 255, 0.15); text-align: center; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.5s ease, box-shadow 0.5s ease;" onmouseenter="this.style.transform='translateY(-6px) scale(1.01)'; this.style.borderColor='var(--primary)'; this.style.boxShadow='0 20px 45px rgba(0, 242, 255, 0.15)';" onmouseleave="this.style.transform='none'; this.style.borderColor='rgba(0, 242, 255, 0.15)'; this.style.boxShadow='none';">
+                <h3 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 1rem;">The Night Pixel Production Standard</h3>
+                <p style="color: var(--text-muted); margin-bottom: 2.5rem; max-width: 550px; margin-left: auto; margin-right: auto;">Every structural editing tier holds our unyielding dedication to timeline precision, frame-accurate metrics, and clear project communications.</p>
+                <a href="mailto:nicks09902@gmail.com?subject=Custom%20Motion%20Project%20Inquiry%20-%20Night%20Pixel%20Studios&body=Hi%20Night%20Pixel%20Team%2C%0A%0AI%20am%20reaching%20out%20to%20start%20a%20new%20custom%20motion%20graphics%20or%20editing%20project%20with%20your%20studio.%20I%20would%20like%20to%20discuss%20the%20creative%20brief%2C%20assets%2C%20and%20timeline%20requirements%20to%20kick%20off%20production.%0A%0APlease%20let%20me%20know%20your%20current%20onboarding%20availability%20and%20the%20next%20steps.%0A%0ABest%20regards%2C" class="action-btn primary-btn" style="font-size: 0.9rem;" title="Secure a Custom Video Editing Project Onboarding Slot via Mail Interface">Custom Inquiry Slot</a>
             </div>
         </section>
 
         <section id="secret-page">
             <div class="secret-card">
                 <span class="blog-tag">SELECTED PIPELINE TARGET</span>
-                <h2 id="selected-title" style="font-family: var(--font-heading); font-size: clamp(2rem, 6vw, 3.5rem); margin-bottom: 1rem; color: var(--primary);">TIER</h2>
+                <h2 id="selected-title" style="font-family: var(--font-heading); font-size: clamp(2rem, 6vw, 3.5rem); margin-bottom: 1rem; color: var(--primary);">TIER SYSTEM</h2>
                 
                 <div class="summary-details">
                     <div class="summary-row">
@@ -1053,14 +1173,14 @@
                     </div>
                     <div class="summary-row">
                         <span class="summary-label">Handshake Transmission Status:</span>
-                        <span class="summary-value" style="color: #00ff66;">Ready To Dispatch</span>
+                        <span class="summary-value" style="color: var(--accent);">Ready For Studio Dispatch</span>
                     </div>
                 </div>
 
-                <p style="margin-bottom: 2.5rem; color: var(--text-muted); font-size: 1rem; max-width: 550px; margin-left: auto; margin-right: auto;">You have selected an elite motion tier asset setup framework. Click below to securely construct and dispatch your inquiry envelope parameters.</p>
-                <a id="contact-trigger" href="#" target="_blank" class="action-btn primary-btn" style="padding: 1.35rem 3.5rem; font-size: 1rem;">Contact Us via Gmail</a>
+                <p style="margin-bottom: 2.5rem; color: var(--text-muted); font-size: 1rem; max-width: 550px; margin-left: auto; margin-right: auto;">You have locked in an elite motion tier configuration blueprint. Click below to securely generate your project onboarding parameters inside your email client.</p>
+                <a id="contact-trigger" href="#" class="action-btn primary-btn" style="padding: 1.35rem 3.5rem; font-size: 1rem;" title="Send Final Package Selection Brief via Mail Integration Trigger Link">Contact Us via Email</a>
                 <br><br>
-                <a href="#hire" onclick="navTo('#hire')" style="color: #444; text-decoration: none; font-size: 0.9rem; margin-top: 1.5rem; display: inline-block; border-bottom: 1px dashed rgba(255,255,255,0.1);">← Back to Packages</a>
+                <a href="#hire" onclick="closeSecretPanel()" style="color: var(--primary); text-decoration: none; font-size: 0.9rem; margin-top: 1.5rem; display: inline-block; border-bottom: 1px dashed rgba(0,242,255,0.3);">← Back to Packages</a>
             </div>
         </section>
 
@@ -1070,62 +1190,282 @@
         <div class="footer-grid">
             <div class="footer-col">
                 <h2>NIGHT PIXEL</h2>
-                <p>Elite editorial enterprise. Engineering raw digital concepts into unforgettable high-retention visual landmarks.</p>
+                <p>Elite editorial enterprise. Engineering raw digital concepts into unforgettable high-retention video landmarks across global distribution channels.</p>
             </div>
             <div class="footer-col">
-                <h4>Connect</h4>
+                <h4>Connect With Us</h4>
                 <ul class="footer-links-list">
-                    <li><a href="https://www.instagram.com/thenightpixel" target="_blank">Instagram</a></li>
-                    <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=nicks09902@gmail.com&su=General%20Business%20Inquiry%20-%20Night%20Pixel%20Studios&body=Hi%20Night%20Pixel%20Team%2C%0A%0AI%20am%20reaching%20out%20via%20your%20website%20to%20connect%20with%20your%20creative%20team%20and%20discuss%20potential%20editorial%20and%20motion%20design%20collaborations.%20I%20would%20love%20to%20hear%20back%20regarding%20your%20current%20workflow%20capacity.%0A%0ABest%20regards%2C" target="_blank">Email Us</a></li>
+                    <li><a href="https://www.youtube.com/@thenightpixel" target="_blank" title="Visit the official Night Pixel YouTube Channel Blueprint Library">YouTube Channel</a></li>
+                    <li><a href="https://www.instagram.com/thenightpixel" target="_blank" title="Follow Night Pixel Studios on Instagram">Instagram Portfolio</a></li>
+                    <li><a href="mailto:nicks09902@gmail.com?subject=General%20Business%20Inquiry%20-%20Night%20Pixel%20Studios" title="Send a General Corporate Video Production Inquiry to Our Editors">Email Studio Desk</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Navigation</h4>
+                <h4>Navigation Indexes</h4>
                 <ul class="footer-links-list">
-                    <li><a href="#about" onclick="navTo('#about')">About Us</a></li>
-                    <li><a href="#faq" onclick="navTo('#faq')">Help / FAQ</a></li>
-                    <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=nicks09902@gmail.com&su=New%20Project%20Booking%20Inquiry%20&body=Hi%20Night%20Pixel%20Team%2C%0A%0AI%20would%20like%20to%20check%20your%20availability%20for%20booking%20an%20upcoming%20motion%20design%20slot.%20Please%20provide%20the%20necessary%20onboarding%20steps%2C%20standard%20turnaround%20times%2C%20and%20production%20requirements.%0A%0AThank%20you%2C" target="_blank">Inquiry Slot Booking</a></li>
+                    <li><a href="#about">About Our House</a></li>
+                    <li><a href="#portfolio">Our Portfolio</a></li>
+                    <li><a href="#hire">Packages & Pricing</a></li>
+                    <li><a href="mailto:nicks09902@gmail.com?subject=New%20Project%20Booking%20Inquiry" title="Book a Commercial Video Asset Editing Pipeline Slot Instantly">Inquiry Slot Booking</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2026 NIGHT PIXEL STUDIOS. ALL RIGHTS RESERVED.</p>
-            <p style="color: #48484f;">PRECISION MOTION DESIGN</p>
+            <p>© 2026 NIGHT PIXEL STUDIOS. ALL RIGHTS RESERVED ALL CHANNELS.</p>
         </div>
     </footer>
 
     <script>
-        // High-Precision Linear Initialization Animation Preloader Loop 
+        const canvas = document.getElementById('bg-canvas');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        let mouseX = window.innerWidth / 2;
+        let mouseY = window.innerHeight / 2;
+        let ballX = window.innerWidth / 2;
+        let ballY = window.innerHeight / 2;
+        
+        const isMobile = window.innerWidth < 768;
+        
+        const keyframeCount = isMobile ? 8 : 35; 
+        const trackCount = isMobile ? 3 : 6; 
+        
+        const speed = 0.12; 
+        let isMoving = false;
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            initStudioWorkspace();
+        });
+
+        let timelineTracks = [];
+        let keyframes = [];
+        let renderBars = [];
+        let timelineTimecodes = [];
+        
+        let playheadX = 0;              
+        const playheadSpeed = 3.5;       
+        let glitchFrameActive = false;   
+        let glitchTimer = 0;             
+
+        function initStudioWorkspace() {
+            timelineTracks = [];
+            keyframes = [];
+            renderBars = [];
+            timelineTimecodes = [];
+
+            for (let i = 0; i < trackCount; i++) {
+                timelineTracks.push({
+                    y: canvas.height * 0.25 + (i * 55),
+                    speed: (Math.random() * 0.75 + 0.35) * (i % 2 === 0 ? 1 : -1), 
+                    offset: Math.random() * canvas.width,
+                    trackLabel: i < 3 ? `V-${i+1}` : `A-${i-2}`
+                });
+            }
+
+            for (let i = 0; i < keyframeCount; i++) { 
+                keyframes.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    size: Math.random() * 3.5 + 2,
+                    pulseSpeed: Math.random() * 0.08 + 0.04, 
+                    pulseOffset: Math.random() * Math.PI,
+                    color: i % 3 === 0 ? 'rgba(0, 242, 255, 0.25)' : (i % 3 === 1 ? 'rgba(188, 19, 254, 0.25)' : 'rgba(0, 255, 102, 0.18)')
+                });
+            }
+
+            const barWidth = 6;
+            const barSpacing = 4;
+            const totalBars = Math.ceil(canvas.width / (barWidth + barSpacing));
+            for (let i = 0; i < totalBars; i++) {
+                renderBars.push({
+                    x: i * (barWidth + barSpacing),
+                    height: Math.random() * 50 + 5,
+                    targetHeight: Math.random() * 60 + 5,
+                    speed: Math.random() * 0.18 + 0.08 
+                });
+            }
+
+            for (let x = 0; x < canvas.width; x += 150) {
+                let frames = Math.floor(Math.random() * 24);
+                let seconds = Math.floor(Math.random() * 60);
+                let formattedCode = `00:04:${seconds < 10 ? '0'+seconds : seconds}:${frames < 10 ? '0'+frames : frames}`;
+                timelineTimecodes.push({ x: x, code: formattedCode });
+            }
+        }
+
+        function drawStudioWorkspace() {
+            glitchTimer++;
+            if (glitchTimer % 240 === 0) { glitchFrameActive = true; } 
+            if (glitchFrameActive && glitchTimer % 245 === 0) { glitchFrameActive = false; }
+
+            if (glitchFrameActive) {
+                ctx.fillStyle = 'rgba(188, 19, 254, 0.015)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+            }
+
+            ctx.strokeStyle = glitchFrameActive ? 'rgba(0, 242, 255, 0.05)' : 'rgba(255, 255, 255, 0.018)';
+            ctx.lineWidth = 1;
+            const gridSpacing = 60; 
+
+            for (let x = 0; x < canvas.width; x += gridSpacing) {
+                ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, canvas.height); ctx.stroke();
+            }
+            for (let y = 0; y < canvas.height; y += gridSpacing) {
+                ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(canvas.width, y); ctx.stroke();
+            }
+
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.12)';
+            ctx.font = '9px monospace';
+            timelineTimecodes.forEach(tc => {
+                ctx.fillText(tc.code, tc.x + 5, 20);
+                ctx.fillStyle = 'rgba(0, 242, 255, 0.2)';
+                ctx.fillRect(tc.x, 0, 1, 8);
+            });
+
+            timelineTracks.forEach((track, index) => {
+                track.offset += track.speed;
+                if (track.offset > canvas.width) track.offset = 0;
+                if (track.offset < 0) track.offset = canvas.width;
+
+                ctx.strokeStyle = 'rgba(255, 255, 255, 0.022)';
+                ctx.lineWidth = 1;
+                ctx.beginPath(); ctx.moveTo(0, track.y); ctx.lineTo(canvas.width, track.y); ctx.stroke();
+
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.08)';
+                ctx.fillText(track.trackLabel, 15, track.y - 15);
+
+                for (let j = -300; j < canvas.width + 300; j += 280) {
+                    const blockX = (j + track.offset) % (canvas.width + 600) - 300;
+                    
+                    if (index % 3 === 0) {
+                        ctx.fillStyle = 'rgba(0, 242, 255, 0.045)';
+                        ctx.strokeStyle = 'rgba(0, 242, 255, 0.12)';
+                    } else if (index % 3 === 1) {
+                        ctx.fillStyle = 'rgba(188, 19, 254, 0.045)';
+                        ctx.strokeStyle = 'rgba(188, 19, 254, 0.12)';
+                    } else {
+                        ctx.fillStyle = 'rgba(0, 255, 102, 0.03)';
+                        ctx.strokeStyle = 'rgba(0, 255, 102, 0.09)';
+                    }
+                    
+                    ctx.fillRect(blockX, track.y - 15, 160, 26);
+                    ctx.strokeRect(blockX, track.y - 15, 160, 26);
+                    ctx.fillStyle = 'rgba(255, 255, 255, 0.15)';
+                    ctx.fillRect(blockX + 8, track.y - 15, 2, 26);
+                }
+            });
+
+            keyframes.forEach((kf, idx) => {
+                kf.pulseOffset += kf.pulseSpeed;
+                const alphaScale = (Math.sin(kf.pulseOffset) + 1) / 2;
+                const currentRadius = kf.size + (alphaScale * 4);
+
+                ctx.fillStyle = kf.color;
+                ctx.beginPath();
+                ctx.arc(kf.x, kf.y, currentRadius, 0, Math.PI * 2);
+                ctx.fill();
+
+                if (!isMobile) {
+                    for (let nextIdx = idx + 1; nextIdx < keyframes.length; nextIdx++) {
+                        const targetNode = keyframes[nextIdx];
+                        const distance = Math.hypot(targetNode.x - kf.x, targetNode.y - kf.y);
+                        
+                        if (distance < 110) { 
+                            ctx.strokeStyle = `rgba(0, 242, 255, ${0.06 * (1 - distance / 110)})`;
+                            ctx.lineWidth = 0.5;
+                            ctx.beginPath();
+                            ctx.moveTo(kf.x, kf.y);
+                            ctx.lineTo(targetNode.x, targetNode.y);
+                            ctx.stroke();
+                        }
+                    }
+                }
+
+                ctx.strokeStyle = 'rgba(255, 255, 255, 0.015)';
+                ctx.beginPath();
+                ctx.moveTo(kf.x - 6, kf.y); ctx.lineTo(kf.x + 6, kf.y);
+                ctx.moveTo(kf.x, kf.y - 6); ctx.lineTo(kf.x, kf.y + 6);
+                ctx.stroke();
+            });
+
+            renderBars.forEach(bar => {
+                if (Math.abs(bar.height - bar.targetHeight) < 1) {
+                    bar.targetHeight = Math.random() * 65 + 5;
+                }
+                bar.height += (bar.targetHeight - bar.height) * bar.speed;
+
+                ctx.fillStyle = 'rgba(188, 19, 254, 0.045)';
+                ctx.fillRect(bar.x, canvas.height - bar.height, 5, bar.height);
+                ctx.fillStyle = 'rgba(0, 242, 255, 0.035)';
+                ctx.fillRect(bar.x, 0, 5, bar.height * 0.6);
+            });
+
+            playheadX += playheadSpeed;
+            if (playheadX > canvas.width) playheadX = 0; 
+            
+            ctx.strokeStyle = 'rgba(0, 242, 255, 0.25)';
+            ctx.lineWidth = 1.5;
+            ctx.shadowBlur = 8;
+            ctx.shadowColor = '#00f2ff'; 
+            
+            ctx.beginPath();
+            ctx.moveTo(playheadX, 0);
+            ctx.lineTo(playheadX, canvas.height);
+            ctx.stroke();
+            ctx.shadowBlur = 0; 
+
+            ctx.strokeStyle = 'rgba(0, 242, 255, 0.06)';
+            ctx.lineWidth = 0.8;
+            ctx.beginPath();
+            ctx.moveTo(ballX, 0); ctx.lineTo(ballX, canvas.height);
+            ctx.moveTo(0, ballY); ctx.lineTo(canvas.width, ballY);
+            ctx.stroke();
+
+            ctx.strokeStyle = 'rgba(188, 19, 254, 0.15)';
+            ctx.strokeRect(ballX - 25, ballY - 25, 50, 50);
+            
+            ctx.font = '7px monospace';
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.2)';
+            ctx.fillText(`X:${Math.floor(ballX)} Y:${Math.floor(ballY)}`, ballX + 35, ballY - 15);
+        }
+
+        initStudioWorkspace();
+
         window.addEventListener('DOMContentLoaded', () => {
             const loadingNum = document.getElementById('loadingNum');
-            const progressCircle = document.getElementById('progressCircle');
+            const statusMessage = document.getElementById('statusMessage');
             const preloader = document.getElementById('preloader');
             
             let count = 0;
-            const totalDash = 345; 
+            const tasks = [
+                { limit: 15, msg: "Initializing Studio Engine" },
+                { limit: 35, msg: "Importing Raw Footage Archives" },
+                { limit: 55, msg: "Parsing Audio Timeline Spectrum Vectors" },
+                { limit: 75, msg: "Tracking Coordinate Keyframes" },
+                { limit: 95, msg: "Compiling High-Bitrate Finishing Output" },
+                { limit: 100, msg: "Cache Render Compilation Complete" }
+            ];
             
             const interval = setInterval(() => {
                 count++;
                 if(count <= 100) {
                     loadingNum.innerText = (count < 10 ? '0' : '') + count + '%';
-                    let offset = totalDash - (count / 100) * totalDash;
-                    progressCircle.style.strokeDashoffset = offset;
+                    const currentTask = tasks.find(t => count <= t.limit);
+                    if (currentTask && statusMessage.innerText !== currentTask.msg) {
+                        statusMessage.innerText = currentTask.msg;
+                    }
                 } else {
                     clearInterval(interval);
+                    preloader.style.transform = 'scale(1.05)';
                     preloader.style.opacity = '0';
-                    setTimeout(() => {
-                        preloader.style.visibility = 'hidden';
-                    }, 600);
+                    setTimeout(() => { preloader.style.visibility = 'hidden'; }, 800);
                 }
             }, 20); 
         });
-
-        // Fluid Custom Tracking Pointer with Inertia
-        const cursor = document.getElementById('cursor');
-        let mouseX = 0, mouseY = 0;
-        let ballX = 0, ballY = 0;
-        const speed = 0.12; 
-        let isMoving = false;
 
         document.addEventListener('mousemove', (e) => {
             mouseX = e.clientX;
@@ -1136,96 +1476,74 @@
             }
         });
 
-        function animateCursor() {
+        function animateLoop() {
             let distX = mouseX - ballX;
             let distY = mouseY - ballY;
-            
             ballX += distX * speed;
             ballY += distY * speed;
             
             cursor.style.left = ballX + 'px';
             cursor.style.top = ballY + 'px';
             
-            requestAnimationFrame(animateCursor);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawStudioWorkspace();
+            requestAnimationFrame(animateLoop);
         }
-        animateCursor();
+        animateLoop();
 
-        // Cursor Scaler Hover Bindings
         function updateCursorSelectors() {
-            document.querySelectorAll('a, button, .ham-trigger, .logo-link').forEach(el => {
+            document.querySelectorAll('a, button, .ham-trigger, .logo-link, .menu-close-btn').forEach(el => {
                 el.addEventListener('mouseenter', () => cursor.classList.add('hovered'));
                 el.addEventListener('mouseleave', () => cursor.classList.remove('hovered'));
             });
         }
         updateCursorSelectors();
 
-        // Compact Floating Sidebar Navigation Hamburger Controls
         const hamBtn = document.getElementById('hamBtn');
         const sideMenu = document.getElementById('sideMenu');
+        const menuCloseBtn = document.getElementById('menuCloseBtn');
 
         function toggleMenu() { 
-            if (document.body.classList.contains('locked')) return;
             hamBtn.classList.toggle('active');
             sideMenu.classList.toggle('open'); 
         }
-        hamBtn.addEventListener('click', toggleMenu);
-
-        // Close sidebar upon overlay click detection regions
-        document.addEventListener('click', (e) => {
-            if (!sideMenu.contains(e.target) && !hamBtn.contains(e.target) && sideMenu.classList.contains('open')) {
-                hamBtn.classList.remove('active');
-                sideMenu.classList.remove('open');
-            }
-        });
-
-        // Gate Logic Mechanics & Scrolling Restriction System Actions
-        const viewMoreBtn = document.getElementById('viewMoreBtn');
-        const homeExtension = document.getElementById('home-extension');
-        const synergyTarget = document.getElementById('synergyTarget');
-
-        viewMoreBtn.addEventListener('click', () => {
-            document.body.classList.remove('locked');
-            homeExtension.classList.add('unlocked');
-            setTimeout(() => {
-                synergyTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 150);
-        });
-
-        // Single Page Application Visbility Routing Router Engine
-        function navTo(targetIdSelector) {
+        
+        function closeMenu() {
             hamBtn.classList.remove('active');
-            sideMenu.classList.remove('open'); 
-            cursor.classList.remove('hovered');
-
-            // Explicit sub-route actions clear initial page scroll lock contexts
-            document.body.classList.remove('locked');
-
-            const targetSection = document.querySelector(targetIdSelector);
-            if (targetSection) {
-                document.querySelectorAll('main section').forEach(s => s.classList.remove('active'));
-                targetSection.classList.add('active');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
+            sideMenu.classList.remove('open');
         }
 
-        // Secure Parameter Transfer Handling Package Bridge
+        hamBtn.addEventListener('click', toggleMenu);
+        menuCloseBtn.addEventListener('click', closeMenu);
+
+        document.querySelectorAll('.side-menu a').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
         function openSecretPage(tier, price, features) {
-            document.getElementById('selected-title').innerText = `${tier.toUpperCase()} SYSTEM`;
-            document.getElementById('selected-plan-name').innerText = `${tier.toUpperCase()} FRAMEWORK`;
-            document.getElementById('selected-price').innerText = `${price} / Project Base`;
+            cursor.classList.remove('hovered');
+            document.getElementById('selected-title').innerText = `${tier.toUpperCase()} TIER PIPELINE`;
+            document.getElementById('selected-plan-name').innerText = `NIGHT PIXEL ${tier.toUpperCase()} PACKAGE`;
+            document.getElementById('selected-price').innerText = `${price} / Project Target`;
             
             let featuresText = "";
             if (features && features.length > 0) {
-                featuresText = "Selected Tier Features:\n";
+                featuresText = "Selected Structural Tier Features:\n";
                 features.forEach(f => { featuresText += ` - [x] ${f}\n`; });
             }
 
-            const subject = encodeURIComponent(`Project Onboarding Brief: ${tier} Tier Booking (${price})`);
-            const body = encodeURIComponent(`Hi Night Pixel Studios,\n\nI am locked in and ready to initialize the project engineering process using your ${tier} Package tier.\n\n${featuresText}\nI am looking forward to coordinating the creative brief, production schedule, and necessary video assets with your editorial team to kick off production.\n\nBest regards,`);
-            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=nicks09902@gmail.com&su=${subject}&body=${body}`;
+            const subject = encodeURIComponent("Project Production Brief: Night Pixel " + tier + " Package Reservation (" + price + ")");
+            const body = encodeURIComponent("Hi Night Pixel Studios Team,\n\nI am ready to lock in the onboarding setup parameters using your specialized " + tier + " Video Editing tier.\n\n" + featuresText + "\nI would love to coordinate our initial footage logs, production brief, and narrative deadline tracking metrics with your head studio desk to initialize production.\n\nBest regards,");
             
-            document.getElementById('contact-trigger').href = gmailUrl;
-            navTo('#secret-page');
+            const mailtoUrl = "mailto:nicks09902@gmail.com?subject=" + subject + "&body=" + body;
+            
+            document.getElementById('contact-trigger').href = mailtoUrl;
+            document.getElementById('secret-page').style.display = 'block';
+            document.getElementById('secret-page').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function closeSecretPanel() {
+            document.getElementById('secret-page').style.display = 'none';
         }
     </script>
 </body>
