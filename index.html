@@ -724,20 +724,112 @@
             max-width: 850px; 
             line-height: 1.8; 
         }
+
+        /* --- FAQ Accordion Layout --- */
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-category {
+            margin-bottom: 3rem;
+        }
+
+        .faq-category h3 {
+            font-family: var(--font-heading);
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            border-bottom: 1px solid rgba(0, 242, 255, 0.2);
+            padding-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        .faq-item {
+            background: rgba(10, 10, 15, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            background: rgba(10, 10, 15, 0.9);
+            border-color: rgba(255, 255, 255, 0.08);
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            padding: 1.25rem 1.5rem;
+            background: transparent;
+            border: none;
+            color: white;
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+
+        .faq-icon {
+            color: var(--primary);
+            font-size: 1.5rem;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            line-height: 1;
+            font-weight: 300;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), padding 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            color: var(--text-muted);
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        .faq-item.active {
+            border-color: rgba(0, 242, 255, 0.3);
+            box-shadow: 0 5px 20px rgba(0, 242, 255, 0.05);
+            background: rgba(10, 10, 15, 0.95);
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            max-height: 300px;
+        }
         
+        /* --- Reviews Grid Layout Setup --- */
         .review-grid { 
-            display: grid; 
-            grid-template-columns: repeat(2, 1fr); 
+            display: flex;
+            flex-wrap: wrap;
             gap: 2.5rem; 
+            justify-content: center;
         }
         
         .review-card { 
             background: rgba(10, 10, 15, 0.96); 
-            padding: 3.5rem 2.5rem; 
+            padding: 2.5rem 2.2rem; 
             border-radius: 6px; 
             position: relative;
             border: 1px solid rgba(255,255,255,0.02);
             transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.5s ease, box-shadow 0.5s ease;
+            width: calc(50% - 1.25rem);
+            min-width: 300px;
         }
         
         .review-card::before {
@@ -755,12 +847,21 @@
             border-color: rgba(0, 242, 255, 0.3);
             box-shadow: 0 20px 45px rgba(0, 242, 255, 0.12);
         }
+
+        .review-stars-meta {
+            font-size: 0.9rem;
+            color: #ffcc00;
+            margin-bottom: 0.8rem;
+            font-family: var(--font-body);
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
         
         .review-card p { 
             font-style: italic; 
-            margin-bottom: 2rem; 
+            margin-bottom: 1.5rem; 
             color: #d1d1d8; 
-            font-size: 1.1rem; 
+            font-size: 1.05rem; 
             line-height: 1.6;
         }
         
@@ -768,9 +869,19 @@
             font-weight: 700; 
             color: var(--text); 
             font-family: var(--font-heading); 
-            font-size: 1rem; 
+            font-size: 0.95rem; 
             letter-spacing: 1px; 
             display: block;
+        }
+
+        .review-card .client-region {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 0.2rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .blog-tag { 
@@ -921,12 +1032,15 @@
             
             .portfolio-grid { grid-template-columns: 1fr; gap: 2rem; }
             .portfolio-links-hub { flex-direction: column; gap: 1rem; }
+
+            .faq-question { font-size: 1rem; padding: 1rem; }
+            .faq-answer { padding: 0 1rem; }
+            .faq-item.active .faq-answer { padding: 0 1rem 1.2rem; }
             
             .package-grid { grid-template-columns: 1fr; gap: 2rem; }
             .package-card { padding: 3.5rem 2rem; }
             
-            .review-grid { grid-template-columns: 1fr; gap: 2rem; }
-            .review-card { padding: 2.5rem 1.8rem; }
+            .review-card { width: 100%; padding: 2.5rem 1.8rem; }
             
             .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; }
             .footer-col p { margin: 0 auto; }
@@ -973,6 +1087,7 @@
         <a href="#home">Home</a>
         <a href="#about">About Us</a>
         <a href="#portfolio">Our Portfolio</a>
+        <a href="#faq">FAQ</a>
         <a href="#reviews">Reviews</a>
         <a href="#hire">Hire Us</a>
     </nav>
@@ -1028,7 +1143,7 @@
             <div class="portfolio-grid">
                 <div class="portfolio-card">
                     <div class="video-embed-frame">
-                        <iframe src="https://www.youtube.com/embed/FkD7JAFopZ0" title="Night Pixel Premium AMV Production Velocity Transition Showcase" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/U1FXVgnLMZw" title="Night Pixel Studio Portfolio Asset 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <h3>Elite AMV Velocity Control</h3>
                     <p>Surgical tracking cuts paired directly with rhythmic velocity modifications. Designed to retain viewer interest through shifting song beats.</p>
@@ -1036,7 +1151,7 @@
 
                 <div class="portfolio-card">
                     <div class="video-embed-frame">
-                        <iframe src="https://www.youtube.com/embed/ulAyzq2EguI" title="Night Pixel Social Media Narrative Retention Optimization Blueprint" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/NsbpxyKhJH8" title="Night Pixel Studio Portfolio Asset 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <h3>High-Retention Platform Editing</h3>
                     <p>Optimized spacing arrays crafted for social media distribution channels. Features custom sound textures and stylized graphic typography.</p>
@@ -1044,7 +1159,7 @@
 
                 <div class="portfolio-card">
                     <div class="video-embed-frame">
-                        <iframe src="https://www.youtube.com/embed/JBYnI34o6pI" title="Night Pixel Advanced Cinematic Color Grading and FX Compositing Asset" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/6PNwPsW9Vjk" title="Night Pixel Studio Portfolio Asset 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <h3>Cinematic Narrative Composite</h3>
                     <p>Deep color space corrections paired with tracking lens fx vectors. Engineered for complex atmospheric visual presentation layouts.</p>
@@ -1052,7 +1167,7 @@
 
                 <div class="portfolio-card">
                     <div class="video-embed-frame">
-                        <iframe src="https://www.youtube.com/embed/u5T8oAWSpD4" title="Night Pixel High-Impact Action Dynamic Frame Composition asset" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/2Nk-aw7RYFQ" title="Night Pixel Studio Portfolio Asset 4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <h3>Dynamic Structural Motion</h3>
                     <p>High-energy visual pacing architecture configured with deep multi-layered kinetic masking pipelines and clean layout rendering loops.</p>
@@ -1069,6 +1184,162 @@
             </div>
         </section>
 
+        <section id="faq">
+            <div class="generic-title-block">
+                <div class="blog-tag" style="margin-bottom: 0.5rem;">KNOWLEDGE BASE</div>
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about working with Night Pixel Studios.</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-category">
+                    <h3>Services & Editing Styles</h3>
+                    <div class="faq-item">
+                        <button class="faq-question">What types of videos do you edit? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>We edit anime edits (AMVs), YouTube videos, shorts, reels, gaming content, promotional videos, cinematic edits, social media content, and custom projects.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Can you create anime edits and AMVs? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>Yes. Anime edits and AMVs are one of our specialties, featuring advanced effects, transitions, motion graphics, and synchronization.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Do you edit YouTube Shorts, Instagram Reels, and TikToks? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>Absolutely. We create optimized vertical content designed for maximum engagement across social media platforms.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Can I request a specific editing style? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>Of course. We customize every project according to your preferred style, references, and creative vision.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">What if I don't have a clear vision for my video? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>No problem. We can help develop creative concepts and suggest editing styles that suit your content.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-category">
+                    <h3>Technical Details & Process</h3>
+                    <div class="faq-item">
+                        <button class="faq-question">What information do you need before starting? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>We typically require your footage, editing instructions, references (if any), preferred style, and deadline.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">What file formats do you accept? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>We accept most common formats including MP4, MOV, AVI, MKV, and various camera recording formats.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">What file formats do you deliver? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>Final videos are usually delivered in MP4 (H.264), but other formats can be provided upon request.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Can you add subtitles and captions? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>Yes. We can add professional subtitles, captions, animated text, and multilingual captions when required.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Do you provide motion graphics? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>Yes. We create custom motion graphics, animated text, logo animations, and visual effects.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Can you improve poor-quality footage? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>We can enhance footage through color correction, stabilization, audio cleanup, and quality improvements whenever possible.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-category">
+                    <h3>Timeline, Delivery & Revisions</h3>
+                    <div class="faq-item">
+                        <button class="faq-question">How long does it take to complete a project? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>Delivery times vary depending on project complexity. Most projects are completed within 1–7 business days.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Do you offer fast delivery? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>Yes. Priority and expedited delivery options are available for urgent projects.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Do you offer revisions? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>Yes. We offer revisions to ensure the final video matches your vision and expectations.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">How will I receive my finished video? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>Completed projects are delivered through secure cloud storage services or downloadable links.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-category">
+                    <h3>Business, Pricing & Security</h3>
+                    <div class="faq-item">
+                        <button class="faq-question">How do I start a project? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>Simply contact us through our contact form, email, or social media with your project details. We will discuss your requirements and provide a quote.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Do you work with content creators and businesses? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>Yes. We work with YouTubers, influencers, streamers, brands, businesses, and individual creators.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">How are project prices determined? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>Pricing depends on video length, complexity, editing requirements, turnaround time, and additional services requested.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Is my footage kept confidential? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>Yes. All client footage and project files are treated with complete confidentiality and professionalism.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-category">
+                    <h3>About Night Pixel Studios</h3>
+                    <div class="faq-item">
+                        <button class="faq-question">Why choose Night Pixel Studios? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>Night Pixel Studios combines creativity, precision, storytelling, and modern editing techniques to produce high-quality videos that engage audiences and elevate content.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">What makes Night Pixel Studios different from other editors? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>We focus on cinematic storytelling, smooth motion design, attention to detail, fast communication, and delivering edits tailored specifically to each client's goals and audience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="reviews">
             <div class="generic-title-block">
                 <div class="blog-tag" style="margin-bottom: 0.5rem;">PROVEN VALIDATION</div>
@@ -1077,20 +1348,149 @@
             </div>
             <div class="review-grid">
                 <div class="review-card">
-                    <p>"The audience retention on my custom video series went from 20% to 55% in a single week. Night Pixel understands the exact timeline rhythm required for modern viewers."</p>
-                    <span>— Gaming Content Creator</span>
+                    <div class="review-stars-meta">⭐⭐⭐⭐⭐ (5.0/5)</div>
+                    <p>"Excellent service and incredible editing quality. The final video helped my content stand out from the competition. The transitions and pacing were exactly what I wanted."</p>
+                    <span>Arjun Mehta</span>
+                    <div class="client-region">Maharashtra, India</div>
                 </div>
                 <div class="review-card">
-                    <p>"Surgical timeline precision. They cut the video fluff and left only high-engagement gold. Absolute game-changers for my brand distribution pipelines."</p>
-                    <span>— Anime Content Strategist</span>
+                    <div class="review-stars-meta">⭐⭐⭐⭐☆ (4.8/5)</div>
+                    <p>"Fast delivery, professional communication, and a stunning final product. The team was responsive and easy to work with."</p>
+                    <span>Priya Sharma</span>
+                    <div class="client-region">Karnataka, India</div>
                 </div>
                 <div class="review-card">
-                    <p>"Fast, professional, and creatively superior editing. They turned a basic raw vlog sequence into a cinematic storytelling masterpiece."</p>
-                    <span>— YouTube Channel Lead</span>
+                    <div class="review-card-accent"></div>
+                    <div class="review-stars-meta">⭐⭐⭐⭐⭐ (5.0/5)</div>
+                    <p>"Night Pixel Studios turned my raw footage into a professional-looking video. The results exceeded my expectations."</p>
+                    <span>Rohan Verma</span>
+                    <div class="client-region">Delhi, India</div>
                 </div>
                 <div class="review-card">
-                    <p>"Night Pixel isn't just an editorial house; they are literal visual engineers. The best high-retention video asset investment I've made all year."</p>
-                    <span>— Boutique Agency Owner</span>
+                    <div class="review-stars-meta">⭐⭐⭐⭐☆ (4.7/5)</div>
+                    <p>"Very creative editing style and excellent attention to detail. Would definitely recommend for content creators."</p>
+                    <span>Ananya Patel</span>
+                    <div class="client-region">Gujarat, India</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars-meta">⭐⭐⭐⭐⭐ (5.0/5)</div>
+                    <p>"Outstanding work on my YouTube content. Audience engagement increased after uploading the edited videos."</p>
+                    <span>Vikram Singh</span>
+                    <div class="client-region">Rajasthan, India</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars-meta">⭐⭐⭐⭐⭐ (5.0/5)</div>
+                    <p>"Night Pixel Studios completely transformed my YouTube content. The pacing, transitions, and storytelling were incredible."</p>
+                    <span>Ethan Carter</span>
+                    <div class="client-region">California, United States</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars-meta">⭐⭐⭐⭐☆ (4.8/5)</div>
+                    <p>"Professional communication, fast delivery, and outstanding quality. Every detail was handled perfectly."</p>
+                    <span>Olivia Bennett</span>
+                    <div class="client-region">Texas, United States</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars-meta">⭐⭐⭐⭐⭐ (5.0/5)</div>
+                    <p>"I needed a cinematic edit for my gaming channel and the final result exceeded my expectations."</p>
+                    <span>Liam Thompson</span>
+                    <div class="client-region">Ontario, Canada</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars-meta">⭐⭐⭐⭐☆ (4.7/5)</div>
+                    <p>"The editing quality was exceptional. The team understood exactly what I wanted and delivered a polished video."</p>
+                    <span>Charlotte Wilson</span>
+                    <div class="client-region">British Columbia, Canada</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars-meta">⭐⭐⭐⭐⭐ (5.0/5)</div>
+                    <p>"Fantastic experience from start to finish. The editing style was modern, energetic, and perfectly matched my content."</p>
+                    <span>James Walker</span>
+                    <div class="client-region">New South Wales, Australia</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars-meta">⭐⭐⭐⭐☆ (4.6/5)</div>
+                    <p>"Great attention to detail and professional communication throughout the entire project."</p>
+                    <span>Sophia Harris</span>
+                    <div class="client-region">Victoria, Australia</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars-meta">⭐⭐⭐⭐⭐ (5.0/5)</div>
+                    <p>"Excellent turnaround time and amazing visual effects. My viewers immediately noticed the improvement in quality."</p>
+                    <span>Noah Martin</span>
+                    <div class="client-region">England, United Kingdom</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars-meta">⭐⭐⭐⭐☆ (4.8/5)</div>
+                    <p>"The editor took my rough footage and turned it into a highly engaging and professional video."</p>
+                    <span>Amelia Taylor</span>
+                    <div class="client-region">Scotland, United Kingdom</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars-meta">⭐⭐⭐⭐⭐ (5.0/5)</div>
+                    <p>"Outstanding editing skills and creative vision. Every scene felt intentional and cinematic."</p>
+                    <span>Lucas Schneider</span>
+                    <div class="client-region">Bavaria, Germany</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars-meta">⭐⭐⭐⭐☆ (4.7/5)</div>
+                    <p>"Smooth communication and amazing final results. Highly recommended."</p>
+                    <span>Emma Fischer</span>
+                    <div class="client-region">Berlin, Germany</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars-meta">⭐⭐⭐⭐⭐ (5.0/5)</div>
+                    <p>"I was impressed by the quality and professionalism. The video looked far more premium than I expected."</p>
+                    <span>Gabriel Dubois</span>
+                    <div class="client-region">Île-de-France, France</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars-meta">⭐⭐⭐⭐☆ (4.6/5)</div>
+                    <p>"Creative, responsive, and highly skilled. I would definitely work with Night Pixel Studios again."</p>
+                    <span>Chloé Laurent</span>
+                    <div class="client-region">Provence-Alpes-Côte d'Azur, France</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars-meta">⭐⭐⭐⭐⭐ (5.0/5)</div>
+                    <p>"The AMV edit was perfectly synchronized with the music and captured the emotion of every scene."</p>
+                    <span>Kenji Tanaka</span>
+                    <div class="client-region">Tokyo Prefecture, Japan</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars-meta">⭐⭐⭐⭐☆ (4.8/5)</div>
+                    <p>"Amazing anime editing skills. The transitions and effects were clean, professional, and impactful."</p>
+                    <span>Yuki Nakamura</span>
+                    <div class="client-region">Osaka Prefecture, Japan</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars-meta">⭐⭐⭐⭐⭐ (5.0/5)</div>
+                    <p>"Night Pixel Studios delivered exactly what I envisioned. The editing quality was world-class."</p>
+                    <span>Daniel Silva</span>
+                    <div class="client-region">São Paulo, Brazil</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars-meta">⭐⭐⭐⭐☆ (4.7/5)</div>
+                    <p>"The storytelling and visual effects were exceptional. My social media engagement increased significantly."</p>
+                    <span>Maria Costa</span>
+                    <div class="client-region">Rio de Janeiro, Brazil</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars-meta">⭐⭐⭐⭐⭐ (5.0/5)</div>
+                    <p>"Professional, creative, and reliable. The final video exceeded all expectations."</p>
+                    <span>Ahmed Hassan</span>
+                    <div class="client-region">Dubai, United Arab Emirates</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars-meta">⭐⭐⭐⭐☆ (4.8/5)</div>
+                    <p>"One of the best editing services I've used. The attention to detail and visual quality were outstanding."</p>
+                    <span>Fatima Al Mansoori</span>
+                    <div class="client-region">Abu Dhabi, United Arab Emirates</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars-meta">⭐⭐⭐⭐⭐ (5.0/5)</div>
+                    <p>"The final edit was cinematic, smooth, and highly engaging. I would definitely recommend Night Pixel Studios."</p>
+                    <span>Thabo Nkosi</span>
+                    <div class="client-region">Gauteng, South Africa</div>
                 </div>
             </div>
         </section>
@@ -1205,6 +1605,7 @@
                 <ul class="footer-links-list">
                     <li><a href="#about">About Our House</a></li>
                     <li><a href="#portfolio">Our Portfolio</a></li>
+                    <li><a href="#faq">FAQ</a></li>
                     <li><a href="#hire">Packages & Pricing</a></li>
                     <li><a href="mailto:nicks09902@gmail.com?subject=New%20Project%20Booking%20Inquiry" title="Book a Commercial Video Asset Editing Pipeline Slot Instantly">Inquiry Slot Booking</a></li>
                 </ul>
@@ -1492,7 +1893,7 @@
         animateLoop();
 
         function updateCursorSelectors() {
-            document.querySelectorAll('a, button, .ham-trigger, .logo-link, .menu-close-btn').forEach(el => {
+            document.querySelectorAll('a, button, .ham-trigger, .logo-link, .menu-close-btn, .faq-question').forEach(el => {
                 el.addEventListener('mouseenter', () => cursor.classList.add('hovered'));
                 el.addEventListener('mouseleave', () => cursor.classList.remove('hovered'));
             });
@@ -1518,6 +1919,25 @@
 
         document.querySelectorAll('.side-menu a').forEach(link => {
             link.addEventListener('click', closeMenu);
+        });
+
+        // FAQ Interactive Accordion Logic
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentNode;
+                
+                // Optional: Close other open FAQs when opening a new one
+                /*
+                document.querySelectorAll('.faq-item.active').forEach(openItem => {
+                    if(openItem !== item) {
+                        openItem.classList.remove('active');
+                    }
+                });
+                */
+
+                item.classList.toggle('active');
+            });
         });
 
         function openSecretPage(tier, price, features) {
